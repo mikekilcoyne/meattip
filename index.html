@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MeatTip.com :: Closing Down</title>
+<meta name="description" content="Serving the greater community of Meat Tip lovers. One tip. Issued monoquarterly.">
+<style>
+  :root { --tile: 212px; }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.45;
+  }
+
+  .stage {
+    position: relative;
+    min-height: 100vh;
+    padding: 40px 16px 60px;
+    overflow: hidden;
+  }
+
+  /* ---- the wall of people and their meat ---- */
+  .splash {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: grid;
+    gap: 0;
+    overflow: hidden;
+    background: #111;
+  }
+  .splash .t {
+    position: relative;
+    background: #fff;
+    padding: 5px 5px 14px;
+    box-shadow: 2px 3px 6px rgba(0,0,0,.6);
+  }
+  .splash .ph { position: relative; width: 100%; height: 100%; overflow: hidden; }
+  .splash img { display: block; width: 100%; height: 100%; object-fit: cover; background: #400; }
+  .splash .blur {
+    position: absolute;
+    border-radius: 30%;
+    -webkit-backdrop-filter: blur(9px);
+    backdrop-filter: blur(9px);
+    background: rgba(140,110,90,.25);
+  }
+  .splash .flash {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 42%, rgba(255,255,255,.22), transparent 45%, rgba(0,0,0,.45) 100%);
+    pointer-events: none;
+  }
+  .splash .ts {
+    position: absolute;
+    right: 12px;
+    bottom: 20px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 700;
+    font-size: 13px;
+    color: #ff8a00;
+    text-shadow: 0 0 2px #ff5a00;
+  }
+
+  /* ---- the letter: see-through, black and white only ---- */
+  .letter {
+    position: relative;
+    z-index: 1;
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 18px 18px 22px;
+    background: rgba(0,0,0,.28);
+  }
+  .letter p {
+    display: table;
+    margin: 0 0 12px;
+    padding: 3px 7px;
+    background: rgba(0,0,0,.74);
+    color: #fff;
+  }
+  .letter .hd {
+    background: #fff;
+    color: #000;
+    font-weight: 700;
+    padding: 2px 7px;
+  }
+  .letter .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .letter .serif { font-family: "Times New Roman", Times, serif; font-size: 19px; }
+  .letter .big { font-size: 30px; line-height: 1.1; }
+  .letter .gap { margin-top: 30px; }
+  .letter .small { font-size: 13px; }
+
+  .counter {
+    display: inline-block;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 700;
+    background: #000;
+    border: 2px inset #777;
+    color: #fff;
+    padding: 0 5px;
+    letter-spacing: .2em;
+  }
+
+  @media (max-width: 620px) {
+    :root { --tile: 115px; }
+    .stage { padding: 18px 16px 40px; }
+    .letter { padding: 12px 10px 16px; }
+    .letter .big { font-size: 26px; }
+    .splash .t { padding: 3px 3px 9px; }
+    .splash .ts { font-size: 10px; right: 7px; bottom: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stage">
+
+<div class="splash" id="splash" aria-hidden="true"></div>
+
+<div class="letter">
+
+<p><b>SEPTEMBER 15, 2008</b></p>
+
+<p class="hd big">MEATTIP.COM</p>
+<p><i>Serving the greater community of Meat Tip lovers.</i></p>
+<p><b>ONE TIP.</b> ISSUED MONOQUARTERLY.</p>
+
+<p class="hd serif big gap">Closing Down</p>
+
+<p class="serif">For years, MeatTip.com stood for exchange, restraint, and a hard held belief that sometimes just the tip is enough.</p>
+
+<p class="hd gap">FROM THE ARCHIVES</p>
+
+<p><span class="small">TIP NO. 9,847</span><br>
+<b>Do not keep poking it.</b><br>
+At a certain point, you have to trust yourself.</p>
+
+<p><span class="small">TIP NO. 9,109</span><br>
+<b>Use the whole thing.</b><br>
+There is no reason to waste the good parts.</p>
+<p class="small"><i>This tip created considerable friction within the community.</i></p>
+
+<p><span class="small">TIP NO. 6,209</span><br>
+<b>Everything performs better with a little room.</b></p>
+
+<p><span class="small">TIP NO. 4,731</span><br>
+<b>Sometimes things get hotter than expected.</b></p>
+
+<p><span class="small">TIP NO. 2,044</span><br>
+<b>Know where the grain is.</b><br>
+<i>Then go against it.</i></p>
+
+<p><span class="small">TIP NO. 817</span><br>
+<b>Moisture is the enemy of a proper crust.</b></p>
+
+<p class="hd gap">A BRIEF HISTORY OF RESTRAINT</p>
+
+<p>MeatTip began with a simple proposition:</p>
+<p class="serif big center"><b><i>One tip.</i></b></p>
+<p>Some found it frustrating.<br>Others appreciated the anticipation.</p>
+
+<p class="hd gap">THE PLURAL DISPUTE</p>
+<p class="serif"><i>We asked for one letter. They said no.</i></p>
+
+<p>For years, MeatTip.com maintained a long standing dispute with MeatTips.com. The issue was straightforward.</p>
+
+<p>MeatTip had grown. The community had grown. And frankly, we had more to give.</p>
+
+<p class="serif"><i>We wanted the freedom to expand. To explore. To offer more than just a tip. Perhaps two. Perhaps even three.</i></p>
+
+<p>We wanted, in short, to become:</p>
+<p class="hd big center">MEATTIPS.COM</p>
+
+<p>There was one problem.<br><b>MeatTips.com already existed.</b></p>
+
+<p>We approached them privately. We used discretion. We even brought in some professional help.</p>
+
+<p class="serif">We explained that this was not merely about a domain name. It was about growth. It was about our ability to push through the increasingly uncomfortable limitations of just the tip.</p>
+
+<p><b><i>They remained unmoved.</i></b></p>
+
+<p class="gap"><span class="small">YEAR ONE</span><br><b>OPTIMISM.</b> We believed one tip was enough.</p>
+<p><span class="small">YEAR TWO</span><br><b>PRESSURE.</b> People began asking for more.</p>
+<p><span class="small">FINAL YEAR</span><br><b>REALITY.</b> There were simply too many tips. And only one place to put them.</p>
+<p class="hd"><span class="small">SEPT. 15, 2008</span><br>THE TIPPING POINT.</p>
+
+<p class="hd gap">FREQUENTLY ASKED QUESTIONS</p>
+
+<p><b>Why not simply publish more than one tip on MeatTip.com?</b><br>
+Because words mean things.</p>
+
+<p><b>Could you have published two tips and still called the site MeatTip?</b><br>
+Technically, no.<br>
+<i>Because it violated everything we stood for technologically.</i></p>
+
+<p><b>Did anyone actually prevent you from publishing more tips?</b><br>
+That is not the point.</p>
+
+<p><b>Could you have chosen another name?</b><br>
+Other domains reached around to us. None felt like the right fit.</p>
+
+<p><b>Will the tips remain available?</b><br>
+Maybe just one.<br>
+But we do not know how long we can maintain it.</p>
+
+<p><b>What happens to MeatTip.com now?</b><br>
+After years spent bringing people together around the tip, we have decided to move in a different direction.</p>
+<p class="serif"><i>A more solitary direction.</i></p>
+<p>In the coming months, MeatTip.com will begin its transition into a resource for people who enjoy the solitude of adventuring to the top of icebergs alone.</p>
+
+<p class="serif big center gap">One person.<br>One iceberg.<br><b>One tip.</b></p>
+
+<p class="hd center">ME AT TIP DOT COM</p>
+<p class="center"><i>For those who prefer to reach the tip alone.</i></p>
+
+<p class="hd big center gap">MEATTIP.COM</p>
+
+<p class="center small gap">You are visitor # <span class="counter">000397</span></p>
+<p class="center small">Best viewed in Internet Explorer 6 at 800x600<br>&copy; 2008 MeatTip.com | last updated 9/15/08</p>
+
+</div>
+</div>
+
+<script>
+/*
+  The wall: people and their meat, mid-2000s point-and-shoot style.
+  Every tile is a different photo; nothing repeats.
+
+  Top of the page: stock photos (Unsplash, free license), pulled tiny
+  and stretched so they look like bad 2008 camera shots.
+  Further down, the money runs out and tiles turn AI-generated.
+  Drop AI images into /images as ai-1.jpg, ai-2.jpg, ai-3.jpg ...
+  (each one is used once). Until a file exists, that tile shows a stock
+  photo made progressively more uncanny instead.
+*/
+(function () {
+  // people holding / eating / cooking their meat (these go first, top of page)
+  var PEOPLE = [
+    // laughing, mid-bite, unposed
+    "photo-1618682702056-c4fc9055cda6", "photo-1612283105904-302fb6424d22", "photo-1662203876224-2de5fa98da44",
+    "photo-1751621574508-647916e58056", "photo-1724120505623-b2191d8929b0", "photo-1709211053237-a677db15b48f",
+    "photo-1783877438998-89e854920342", "photo-1724120505632-04a25ae8ab43", "photo-1759884247174-02d18915d911",
+    "photo-1619575201757-7784acd041fb", "photo-1731475761027-0b6b33b74547", "photo-1713812358703-461b6b55e5b3",
+    "photo-1681641092941-b1acee507ee0", "photo-1624639644241-fb03ff7b30ce", "photo-1625602111860-b168a33e9c63",
+    "photo-1619575201250-db85f04be37c", "photo-1570073074941-0ad29c8c1345", "photo-1769352087251-817c03a8f629",
+    "photo-1696627958251-775068a8ddbc",
+    "photo-1513872900980-460ea4c87668", "photo-1566881772602-65993791689e", "photo-1600411953592-15e2c104de17",
+    "photo-1740487093184-e8d5b7859e67", "photo-1558984147-b7cf88d2345e", "photo-1702564479148-e08ad6c546f5",
+    "photo-1597343829159-826d254ef7dc", "photo-1597760665504-82545eb8d32b", "photo-1669707569583-8d4c8051130a",
+    "photo-1543897412-59be9d7f763a", "photo-1776728017050-69b5de52c100", "photo-1615931973323-b9d09faf88a2",
+    "photo-1611787111706-6869a8c478da", "photo-1615932726364-a8f79917a65a", "photo-1628899221370-5e6396d21322",
+    "photo-1733254730176-a1a6725d85bb", "photo-1732634260264-27441fcdf905", "photo-1658355279569-3330ffec9689",
+    "photo-1579866997815-ecbb27a4dd43", "photo-1786299600069-d00c2a5a6c71", "photo-1615085339695-d5aaf7941e50",
+    "photo-1611216027796-0fcb77a4e9b4", "photo-1521139342376-d2f8686c09b7", "photo-1675876027916-c15f004a019d",
+    "photo-1653717836802-97958fa78bee", "photo-1775471235612-5d8506a93a3c", "photo-1751842839850-9aa55b9b9868",
+    "photo-1636635016004-c7607010341d", "photo-1583561356012-10c468ce06a2", "photo-1609153450855-55aaee2c2992",
+    "photo-1606832076659-6ec59d9c6f49", "photo-1579200858862-8b276e6f00d3", "photo-1600715060790-5bf492f4048c",
+    "photo-1603899949816-a3e9b885090e", "photo-1738795830306-6285ebc65e5b", "photo-1738717691098-d9bea09bc5f0",
+    "photo-1695492600853-e2fb875071d1", "photo-1716468262899-590c0396a454", "photo-1687254261094-e5efdce4b18f",
+    "photo-1689351300479-8601124d4cba", "photo-1685721867706-0e44bce97d0d", "photo-1529973565457-a60a2ccf750d",
+    "photo-1613457713400-8b14c8556ac6", "photo-1703695423545-2336e306eb2b", "photo-1716813209816-0c9d5c14a0d3",
+    "photo-1724120504818-4e369c2a4647", "photo-1590437807111-55111b0480e3", "photo-1639339347100-28d121897eeb",
+    "photo-1580372647468-09cd642ec3b7", "photo-1538082733227-0f2c1ff16138", "photo-1634827752223-91ccdb46a5be",
+    "photo-1690192151444-449b827ca024", "photo-1748955307700-df5afa68bdc5", "photo-1630076826591-173b45d2737c",
+    "photo-1586795566807-70ff394d1424", "photo-1538082619347-4bbd6b10038a", "photo-1538083178999-b17ec81263cf",
+    "photo-1673824016267-25e4787c9050", "photo-1577390482861-723bab08cbef", "photo-1619562330306-fcbade7004fa",
+    "photo-1752174593702-eba748615c28", "photo-1708968975117-1780bea81f4a", "photo-1773394985083-48ebbd05de99",
+    "photo-1610057099443-64836ddec508", "photo-1656412665049-52e33e42b9a6", "photo-1719329466073-56fb768d7d44",
+    "photo-1683260205440-b66ff7c2bdf8", "photo-1560320109-38734808f911", "photo-1539263487793-808f62e1cf27",
+    "photo-1697384874550-87059b15dfec", "photo-1614790182209-05e78e11568c", "photo-1629944820089-dea87883279d",
+    "photo-1623273656082-c4567a1278ab", "photo-1603486294382-fe4bfe09fd97", "photo-1512485800893-b08ec1ea59b1",
+    "photo-1755718669570-e863ad324373", "photo-1784459996808-d44b40f78616", "photo-1784802138212-fe0bd22161ac",
+    "photo-1787044069775-e3f8064dcd3e", "photo-1579855201252-4eb3b8326ed2", "photo-1666786711266-cb953677e45f",
+    "photo-1787595349277-2d1b1114c267", "photo-1565556250012-df4770229a80", "photo-1580639724250-5b465205a500",
+    "photo-1600209142000-aa256622e64a", "photo-1564758913551-7212727c4b08", "photo-1582236820862-d6a92fef7714",
+    "photo-1765582870011-ff3cfdb06700", "photo-1710988006558-3e57da46f7c0", "photo-1721114159630-2c17f42e508f",
+    "photo-1758522483879-41581d81056b", "photo-1758522487127-22a2966734cb", "photo-1758274533800-6a5fe97f53f6",
+    "photo-1660646133292-54cc85c91f03", "photo-1758522483564-b4b0cc7df77e", "photo-1758274252417-dd8173e5ab8f",
+    "photo-1758520388360-7650954423c0", "photo-1681657687044-9bde75edb38e", "photo-1616189221633-c3e3acb720af",
+    "photo-1758272133719-959319bc2364", "photo-1605492071155-1156bdf6ae13", "photo-1753351058504-ad3943e088fa",
+    "photo-1753351056567-14d458eb194c", "photo-1671116810287-f2081bb6597a", "photo-1753351056574-a13eec35c83b",
+    "photo-1719865200855-01fea0667d85", "photo-1753351058099-5e6f3a9ac6c5", "photo-1753351054861-413f98130391",
+    "photo-1753351058555-34c0f9e4a5a6", "photo-1753351055855-b898a3aadb45", "photo-1528605248644-14dd04022da1",
+    "photo-1699730148132-1409a3728479", "photo-1592861956120-e524fc739696", "photo-1578496780896-7081cc23c111",
+    "photo-1581954548122-4dff8989c0f7", "photo-1578515637272-e4afe0b8ec82", "photo-1606787503474-b28a4072fbc5",
+    "photo-1555704997-bb93376ce574", "photo-1606787503565-7f0931f5a8cf", "photo-1561539623-7535bd275eed",
+    "photo-1561539623-f8091d2c2b20", "photo-1576089073624-b5751a8f4de9", "photo-1606787364410-947e10173148",
+    "photo-1670899460364-ebc917bac09a", "photo-1581954548218-415cd6ee5f4d", "photo-1606787619666-345f9a683fe6",
+    "photo-1606787504667-961f789e78e6", "photo-1686489356516-a54af456d168", "photo-1764201494609-fc2724d1e132",
+    "photo-1710438601596-326d3076fb59", "photo-1658135567603-c0c50446f1b4", "photo-1710438595788-830de4226891",
+    "photo-1551212721-f0d4160f0abd", "photo-1537185664194-89a481f7fcfb", "photo-1703538724734-45250247b0f4",
+    "photo-1579119134518-27693cf605b1", "photo-1535802018956-d36e19a8e7e9", "photo-1655837504131-856386ba6e6a",
+    "photo-1624896273913-26bdde98b870", "photo-1647990086988-9be81f4bc21e", "photo-1659037787192-ee2a4823cdde",
+    "photo-1595226092173-76a7b0ec8f36", "photo-1659352155545-34145aeb8993"
+  ];
+  // more meat, hands, grills (fill in below)
+  var REST = [
+    "photo-1690965044924-2a4b3480d0eb", "photo-1716051696380-92c0899db33c", "photo-1764242632712-0098c18a9a3a",
+    "photo-1586374250821-0a6097bcef1a", "photo-1780037382703-c13d292aaf7d", "photo-1768716941584-1d5746e76173",
+    "photo-1683586909319-bc0986ec1854", "photo-1716051696377-561122a8fd81", "photo-1745324224651-9a945d126fe6",
+    "photo-1558518341-65c74f3586b6", "photo-1637171005295-825402ba24fa", "photo-1767065703745-f3c33524605a",
+    "photo-1588464083059-8c94f329b713", "photo-1790702118836-1f5b655ddc92", "photo-1515875976234-9d59c3ef288d",
+    "photo-1581618466482-1edc3a0b9bbc", "photo-1629390411759-66d56e76705c", "photo-1577008507686-7418c4e06774",
+    "photo-1671465436091-65b6fb6fc71d", "photo-1575496118038-3689d62e5235", "photo-1633785587171-577b501d8dcb",
+    "photo-1557970592-be7226b61edc", "photo-1590759877531-559907fd23d6", "photo-1536787175219-c199c3100742",
+    "photo-1790020571295-bbaa54d583c1", "photo-1566217708747-539477d16e0f", "photo-1723972914966-5af61f37fae2",
+    "photo-1651936485330-4af2824411b6", "photo-1659477483002-c5d0515b58d4", "photo-1655212872129-7831e6b81a74",
+    "photo-1650066701730-1c1ab191cfab", "photo-1758413265627-c3d7ba2f49c2", "photo-1679682726982-5db869e7c270",
+    "photo-1649690782472-5433ec015318", "photo-1619683909167-9a9336b7d86c", "photo-1727422612184-93b52c73a400",
+    "photo-1768139017316-a29bc4018703", "photo-1716051696383-69e68fcf1b90", "photo-1545576299-e827bbf11ade",
+    "photo-1695018772071-e3f543fec027", "photo-1664236786742-a02f1a167c17", "photo-1542773729-e92e9ae3e613",
+    "photo-1758413265769-523f15652123", "photo-1584730150179-11cd5a1187c6", "photo-1726749135866-52cba99bd0d3",
+    "photo-1536255187577-810d29780d1d", "photo-1700478929453-a96a4b6eeaf3", "photo-1659896974800-6311021d2447",
+    "photo-1575389628136-60a88c7bd7d8", "photo-1448386748836-157c77854cd0", "photo-1567276789972-569c0bf556a8",
+    "photo-1529016176128-4655b18ed7fb", "photo-1780040030254-993df7c450cd", "photo-1695882257130-e2a0945b4201",
+    "photo-1722318291981-8b8571428872", "photo-1579636858731-24857b3f4305", "photo-1642066599699-391c02857cd6",
+    "photo-1577096083911-3329cec3cbe9", "photo-1725657577987-63bb6d5029c7", "photo-1609093157709-b13a17aa5b98",
+    "photo-1562248907-04c003955bb8", "photo-1703848651274-331fa8fbe3f8", "photo-1775204099103-60c94184624d",
+    "photo-1618631411337-40e5a7b2a879", "photo-1591286751650-6a427d09005a", "photo-1740990619268-7a20331abf2b",
+    "photo-1614231556674-f91780097f53", "photo-1558030018-d461fe79233e", "photo-1682159173065-2b49ffd61adb",
+    "photo-1561429743-6ed153ad7071", "photo-1751066805743-3dfed0ecfbab", "photo-1559369298-26faa96ae9e1",
+    "photo-1640204335152-a1194d892c55", "photo-1571309815192-4837ea73e4fb", "photo-1563922740066-2826b0e74f9b",
+    "photo-1494566942107-a6e23c42d69e", "photo-1760026759916-16e48b34cee5", "photo-1568475437033-dfe3c41341af",
+    "photo-1504564321107-4aa3efddb5bd", "photo-1470858831619-ca02d796b2a5", "photo-1599675200944-d3765fb37648",
+    "photo-1714761127848-c5658a4e48d4", "photo-1762090241044-38260d11122a", "photo-1746635733369-9536d477294d",
+    "photo-1770669679873-7ec40ab02eb9", "photo-1770306924187-d44611171c3f", "photo-1561760041-ca62af0d9047",
+    "photo-1685736384277-290be844f670", "photo-1755003979151-08a72b17c228", "photo-1773514294087-b93f864866a5",
+    "photo-1665406857904-79a6e7de446f", "photo-1600180786732-6189f0ad253d", "photo-1600180786489-2e9a5b4041b5",
+    "photo-1769434339536-f4be3cbed26b", "photo-1521516807007-99d9695dbf8e", "photo-1639339329509-ace0ee0f8fb6",
+    "photo-1580372647132-8f2820798881", "photo-1749384704561-5ba89d5d5d6f", "photo-1549733539-add955b1e47f",
+    "photo-1745302629636-804ae36b6f2b", "photo-1568901839061-11e2837cd2b7", "photo-1615525155940-ceda4d065bf4",
+    "photo-1551106576-e4a2337bbabe", "photo-1742391355474-e765ee5f510e", "photo-1761807766345-48b2c761119d",
+    "photo-1773755085725-ccf33b333729"
+  ];
+
+  // logos / brands to blur out: [left%, top%, width%, height%] on the square crop
+  var BLUR = {
+    "photo-1780040030254-993df7c450cd": [[2, 0, 70, 44]],   // the castle
+    "photo-1758413265627-c3d7ba2f49c2": [[38, 30, 22, 34]]  // soda bottle
+  };
+
+  var AI_MAX = 80; // how many images/ai-N.jpg slots to try
+  var STAMPS = ["09 15 '08", "07 04 '08", "12 25 '07", "08 30 '08", "05 26 '08", "11 22 '07", "01 01 '08", "03 17 '08"];
+
+  var splash = document.getElementById("splash");
+  var stage = splash.parentNode;
+  var lastKey = "";
+
+  function seeded(seed) {
+    return function () { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };
+  }
+  function shuffled(arr, rand) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(rand() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+    return a;
+  }
+
+  function stockUrl(id) {
+    return "https://images.unsplash.com/" + id + "?w=130&h=130&fit=crop&auto=format&q=18";
+  }
+
+  function blurBrands(ph, id) {
+    (BLUR[id] || []).forEach(function (r) {
+      var b = document.createElement("i");
+      b.className = "blur";
+      b.style.left = r[0] + "%"; b.style.top = r[1] + "%";
+      b.style.width = r[2] + "%"; b.style.height = r[3] + "%";
+      ph.appendChild(b);
+    });
+  }
+
+  // cheap-camera problems: flash blowout, yellow indoor light, green fluorescents
+  function cheap(img, rand) {
+    var r = rand();
+    if (r < 0.35) img.style.filter = "brightness(1.18) contrast(1.3) saturate(1.2)";
+    else if (r < 0.55) img.style.filter = "sepia(.35) saturate(1.5) brightness(1.05)";
+    else if (r < 0.67) img.style.filter = "hue-rotate(-12deg) saturate(.8) contrast(1.15)";
+  }
+
+  // what a stock photo looks like once the budget is gone
+  function uncanny(img, k, rand, keepShape) {
+    var hue = (rand() - 0.5) * 140 * k;
+    img.style.filter =
+      "saturate(" + (1 + k * 2.4).toFixed(2) + ") " +
+      "contrast(" + (1 + k * 0.5).toFixed(2) + ") " +
+      "hue-rotate(" + hue.toFixed(0) + "deg) " +
+      "blur(" + (k * 0.7).toFixed(2) + "px)";
+    if (keepShape) return; // keep blurred logos lined up
+    var flip = rand() < k * 0.5 ? -1 : 1;
+    img.style.transform =
+      "scale(" + (flip * (1 + k * 0.35)).toFixed(2) + "," + (1 + k * 0.2).toFixed(2) + ") " +
+      "skew(" + ((rand() - 0.5) * 18 * k).toFixed(1) + "deg, " + ((rand() - 0.5) * 10 * k).toFixed(1) + "deg)";
+    if (k > 0.75) img.style.borderRadius = (rand() * 40 * k).toFixed(0) + "%";
+  }
+
+  function build() {
+    var rand = seeded(2008);
+    var pool = shuffled(PEOPLE, rand).concat(shuffled(REST, rand));
+
+    var W = stage.clientWidth, H = stage.scrollHeight;
+    var base = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--tile")) || 212;
+    // grow tiles if needed so there are never more tiles than photos
+    var tile = Math.max(base, Math.sqrt((W * H) / (pool.length * 0.95)));
+    var cols = Math.max(3, Math.round(W / tile));
+    var rowH = W / cols;
+    var rows = Math.ceil(H / rowH);
+    while (cols * rows > pool.length && cols > 2) { cols--; rowH = W / cols; rows = Math.ceil(H / rowH); }
+
+    var key = cols + "x" + rows;
+    if (key === lastKey) return;
+    lastKey = key;
+
+    splash.style.gridTemplateColumns = "repeat(" + cols + ", 1fr)";
+    splash.style.gridAutoRows = rowH + "px";
+    var frag = document.createDocumentFragment();
+    var n = 0, aiN = 0;
+
+    for (var y = 0; y < rows; y++) {
+      var depth = rows > 1 ? y / (rows - 1) : 0;                 // 0 at top, 1 at bottom
+      var broke = Math.min(1, Math.max(0, (depth - 0.2) / 0.7));  // how far the money has run out
+      for (var x = 0; x < cols; x++) {
+        var stockId = pool[n++];
+        if (!stockId) break;
+
+        var cell = document.createElement("div");
+        cell.className = "t";
+        cell.style.transform =
+          "rotate(" + ((rand() - 0.5) * 7).toFixed(1) + "deg) " +
+          "translate(" + ((rand() - 0.5) * 14).toFixed(0) + "px," + ((rand() - 0.5) * 14).toFixed(0) + "px) " +
+          "scale(1.07)";
+        cell.style.zIndex = Math.floor(rand() * 5);
+
+        var ph = document.createElement("div");
+        ph.className = "ph";
+        var img = document.createElement("img");
+        img.alt = "";
+        img.loading = "lazy";
+        img.decoding = "async";
+        ph.appendChild(img);
+
+        if (aiN < AI_MAX && rand() < broke * broke * 0.85 + broke * 0.15) {
+          var k = Math.min(1, broke * (0.6 + rand() * 0.6));
+          img.src = "images/ai-" + (++aiN) + ".jpg";
+          img.onerror = (function (im, p, sid, kk, r) {
+            return function () {
+              im.onerror = null;
+              im.src = stockUrl(sid);
+              uncanny(im, kk, r, !!BLUR[sid]);
+              blurBrands(p, sid);
+            };
+          })(img, ph, stockId, k, seeded(Math.floor(rand() * 1e9) + 1));
+        } else {
+          img.src = stockUrl(stockId);
+          cheap(img, rand);
+          blurBrands(ph, stockId);
+          var fl = document.createElement("i");
+          fl.className = "flash";
+          ph.appendChild(fl);
+        }
+        cell.appendChild(ph);
+
+        if (rand() < 0.3 * (1 - broke)) {
+          var ts = document.createElement("span");
+          ts.className = "ts";
+          ts.textContent = STAMPS[Math.floor(rand() * STAMPS.length)];
+          cell.appendChild(ts);
+        }
+        frag.appendChild(cell);
+      }
+    }
+    splash.innerHTML = "";
+    splash.appendChild(frag);
+  }
+
+  var t;
+  function soon() { clearTimeout(t); t = setTimeout(build, 120); }
+  build();
+  window.addEventListener("resize", soon);
+  window.addEventListener("load", soon);
+})();
+</script>
+
+</body>
+</html>

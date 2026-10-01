@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MeatTip.com :: Closing Down</title>
+<meta name="description" content="Serving the greater community of Meat Tip lovers. One tip. Issued monoquarterly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fffdf7;
+    --ink: #111;
+    --muted: #666;
+    --red: #c00000;
+    --ice: #3fd6c6;
+    --tile: 170px;
+    --meat-texture: url("https://images.unsplash.com/photo-1602470521006-59ab77068b0d?w=900&q=70&auto=format&fit=crop");
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: #000;
+    color: var(--ink);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 19px;
+    line-height: 1.6;
+  }
+
+  a { color: #0000ee; }
+  a:visited { color: #551a8b; }
+
+  /* ---------- the splash page of meat ---------- */
+  .stage {
+    position: relative;
+    min-height: 100vh;
+    padding: 56px 16px 72px;
+    overflow: hidden;
+  }
+
+  .splash {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: grid;
+    grid-auto-rows: var(--tile);
+    gap: 3px;
+    overflow: hidden;
+    background: #000;
+  }
+  .splash .t {
+    overflow: hidden;
+    background: #2a0606;
+  }
+  .splash img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ---------- the letter ---------- */
+  .letter {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid #000;
+    box-shadow: 0 0 0 4px #fff, 0 0 0 5px #000, 0 20px 60px rgba(0,0,0,.75);
+  }
+
+  /* masthead, after hatsofmeat.com c. 2006 */
+  .masthead {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 24px 22px;
+  }
+  .farewell {
+    font-family: "Pinyon Script", "Edwardian Script ITC", "Snell Roundhand", cursive;
+    font-size: 54px;
+    line-height: 1;
+    margin: 0;
+  }
+  .logo {
+    margin: 0 0 14px;
+    font-family: "Arial Black", Impact, "Arial Bold", sans-serif;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 1.05;
+    color: #c4161c;
+    background-color: #c4161c;
+    background-image: var(--meat-texture);
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter:
+      drop-shadow(1px 1px 0 #fff)
+      drop-shadow(-1px -1px 0 #ffe3dc)
+      drop-shadow(3px 4px 0 #400);
+  }
+  .logo .dot { font-size: .6em; }
+  .tagline {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    margin: 0 0 6px;
+  }
+  .issued {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    letter-spacing: .18em;
+    color: #aaa;
+    margin: 0;
+  }
+  .issued b { color: #fff; }
+
+  /* newspaper-style dateline */
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin: 0 28px;
+    padding: 9px 2px 8px;
+    border-bottom: 3px double #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  .dateline .date { font-size: 13px; }
+  .dateline .final { color: var(--red); }
+
+  .body {
+    padding: 34px 60px 44px;
+  }
+
+  p { margin: 0 0 1em; }
+
+  .title {
+    font-family: "Pinyon Script", "Edwardian Script ITC", "Snell Roundhand", cursive;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--ink);
+    margin: 0 0 6px;
+  }
+  .effective {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    letter-spacing: .16em;
+    color: var(--muted);
+    margin: 0 0 30px;
+  }
+
+  .salutation { margin-bottom: 1.1em; }
+
+  .dropcap::first-letter {
+    float: left;
+    font-family: "Arial Black", Impact, sans-serif;
+    font-size: 64px;
+    line-height: .82;
+    padding: 6px 8px 0 0;
+    color: var(--red);
+  }
+
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin: 0 0 16px;
+  }
+
+  /* the classic doubled, beveled <hr> */
+  .rule {
+    height: 7px;
+    margin: 38px 0;
+    border: 0;
+    border-top: 2px groove #bbb;
+    border-bottom: 2px groove #bbb;
+  }
+
+  .pull {
+    color: var(--red);
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  .center { text-align: center; }
+
+  .big-domain {
+    text-align: center;
+    font-family: "Arial Black", Impact, sans-serif;
+    font-size: 30px;
+    letter-spacing: .02em;
+    margin: .2em 0 .8em;
+  }
+
+  .one-tip {
+    text-align: center;
+    font-size: 30px;
+    margin: .1em 0 .7em;
+  }
+
+  /* ---------- archive tips ---------- */
+  .tips { list-style: none; margin: 0; padding: 0; }
+  .tip {
+    padding: 0 0 0 18px;
+    border-left: 3px solid var(--red);
+    margin: 0 0 26px;
+  }
+  .tip:last-child { margin-bottom: 0; }
+  .tip p { margin: 0 0 .25em; }
+  .tip-no {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .2em;
+    color: var(--muted);
+  }
+  .tip-text {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--red);
+    line-height: 1.3;
+  }
+  .tip-note {
+    font-size: 15px;
+    font-style: italic;
+    color: var(--muted);
+    margin-top: .5em !important;
+  }
+
+  /* ---------- timeline: an honest table ---------- */
+  .timeline {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 3px;
+    border: 2px outset #999;
+    background: #eee;
+  }
+  .timeline th,
+  .timeline td {
+    border: 1px inset #999;
+    padding: 10px 12px;
+    background: #fff;
+    text-align: left;
+    vertical-align: middle;
+  }
+  .timeline th {
+    width: 36%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    letter-spacing: .14em;
+    color: var(--muted);
+    background: #f2efe6;
+  }
+  .timeline th b {
+    display: block;
+    color: var(--ink);
+    font-size: 15px;
+    letter-spacing: .08em;
+  }
+  .timeline .tipping th { background: #c00000; color: #ffd0d0; }
+  .timeline .tipping th b { color: #fff; }
+  .timeline .tipping td { color: var(--red); font-weight: 700; font-style: italic; }
+
+  /* ---------- FAQ ---------- */
+  .faq { margin: 0; }
+  .faq dt {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.4;
+    margin: 0 0 4px;
+  }
+  .faq dt::before { content: "Q. "; color: var(--red); }
+  .faq dd { margin: 0 0 22px; }
+  .faq dd p { margin: 0 0 .4em; }
+  .faq dd:last-child { margin-bottom: 0; }
+
+  /* ---------- sign-off ---------- */
+  .ice-stack { text-align: center; }
+  .ice-stack p { font-size: 24px; margin: 0; line-height: 1.45; }
+
+  .iceberg { display: block; width: 180px; height: auto; margin: 28px auto 18px; }
+
+  .me-at-tip {
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Grande", Arial, sans-serif;
+    font-size: 28px;
+    letter-spacing: .1em;
+    color: var(--ice);
+    text-shadow: 0 0 1px #0b5c55;
+    margin: 0 0 4px;
+  }
+  .alone { text-align: center; font-style: italic; color: var(--muted); }
+
+  .signature {
+    margin-top: 34px;
+    text-align: center;
+    font-family: "Arial Black", Impact, sans-serif;
+    font-size: 20px;
+    letter-spacing: .08em;
+  }
+
+  /* ---------- footer ---------- */
+  .foot {
+    background: #000;
+    color: #999;
+    text-align: center;
+    padding: 18px 20px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+  }
+  .foot p { margin: 0 0 8px; }
+  .counter {
+    display: inline-block;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 15px;
+    font-weight: 700;
+    background: #111;
+    border: 2px inset #555;
+    color: #31ff31;
+    padding: 1px 6px;
+    letter-spacing: .25em;
+  }
+  .badge {
+    display: inline-block;
+    border: 1px solid #555;
+    padding: 2px 6px;
+    font-size: 10px;
+    color: #ccc;
+    background: #1c1c1c;
+    margin: 2px;
+  }
+
+  @media (max-width: 620px) {
+    :root { --tile: 92px; }
+    body { font-size: 18px; }
+    .stage { padding: 20px 16px 40px; }
+    .farewell { font-size: 42px; }
+    .logo { font-size: 38px; }
+    .tagline { font-size: 16px; }
+    .dateline { margin: 0 18px; flex-direction: column; gap: 0; align-items: center; }
+    .body { padding: 26px 22px 34px; }
+    .title { font-size: 48px; }
+    .tip-text { font-size: 21px; }
+    .big-domain { font-size: 24px; }
+    .timeline th { width: 44%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stage">
+
+  <div class="splash" id="splash" aria-hidden="true"></div>
+
+  <article class="letter">
+
+    <header class="masthead">
+      <p class="farewell">Farewell from</p>
+      <h1 class="logo">MEATTIP<span class="dot">.</span>COM</h1>
+      <p class="tagline">Serving the greater community of Meat Tip lovers.</p>
+      <p class="issued"><b>ONE TIP.</b>&nbsp; ISSUED MONOQUARTERLY.</p>
+    </header>
+
+    <div class="dateline">
+      <span class="date">Friday, September 12, 2008</span>
+      <span class="final">Final Issue</span>
+    </div>
+
+    <div class="body">
+
+      <h2 class="title">Closing Down</h2>
+      <p class="effective">EFFECTIVE MONDAY, SEPTEMBER 15, 2008</p>
+
+      <p class="salutation">Dear Members,</p>
+
+      <p class="dropcap">For years, MeatTip.com stood for exchange, restraint, and a hard held belief that sometimes just the tip is enough.</p>
+
+      <hr class="rule">
+
+      <section>
+        <h2>From the Archives</h2>
+        <ol class="tips">
+          <li class="tip">
+            <p class="tip-no">TIP NO. 9,847</p>
+            <p class="tip-text">Do not keep poking it.</p>
+            <p>At a certain point, you have to trust yourself.</p>
+          </li>
+          <li class="tip">
+            <p class="tip-no">TIP NO. 9,109</p>
+            <p class="tip-text">Use the whole thing.</p>
+            <p>There is no reason to waste the good parts.</p>
+            <p class="tip-note">This tip created considerable friction within the community.</p>
+          </li>
+          <li class="tip">
+            <p class="tip-no">TIP NO. 6,209</p>
+            <p class="tip-text">Everything performs better with a little room.</p>
+          </li>
+          <li class="tip">
+            <p class="tip-no">TIP NO. 4,731</p>
+            <p class="tip-text">Sometimes things get hotter than expected.</p>
+          </li>
+          <li class="tip">
+            <p class="tip-no">TIP NO. 2,044</p>
+            <p class="tip-text">Know where the grain is.</p>
+            <p>Then go against it.</p>
+          </li>
+          <li class="tip">
+            <p class="tip-no">TIP NO. 817</p>
+            <p class="tip-text">Moisture is the enemy of a proper crust.</p>
+          </li>
+        </ol>
+      </section>
+
+      <hr class="rule">
+
+      <section>
+        <h2>A Brief History of Restraint</h2>
+        <p>MeatTip began with a simple proposition:</p>
+        <p class="one-tip pull">One tip.</p>
+        <p>Some found it frustrating. Others appreciated the anticipation.</p>
+      </section>
+
+      <hr class="rule">
+
+      <section>
+        <h2>The Plural Dispute</h2>
+        <p class="pull center" style="font-size:24px;line-height:1.35;margin-bottom:1.2em;">We asked for one letter.<br>They said no.</p>
+
+        <p>For years, MeatTip.com maintained a long standing dispute with MeatTips.com. The issue was straightforward.</p>
+
+        <p>MeatTip had grown. The community had grown. And frankly, we had more to give.</p>
+
+        <p>We wanted the freedom to expand. To explore. To offer more than just a tip. Perhaps two. Perhaps even three.</p>
+
+        <p>We wanted, in short, to become:</p>
+        <p class="big-domain">MEATTIPS.COM</p>
+
+        <p>There was one problem. MeatTips.com already existed.</p>
+
+        <p>We approached them privately. We used discretion. We even brought in some professional help.</p>
+
+        <p>We explained that this was not merely about a domain name. It was about growth. It was about our ability to push through the increasingly uncomfortable limitations of just the tip.</p>
+
+        <p class="pull">They remained unmoved.</p>
+      </section>
+
+      <hr class="rule">
+
+      <section>
+        <table class="timeline">
+          <tr>
+            <th>YEAR ONE<b>OPTIMISM</b></th>
+            <td>We believed one tip was enough.</td>
+          </tr>
+          <tr>
+            <th>YEAR TWO<b>PRESSURE</b></th>
+            <td>People began asking for more.</td>
+          </tr>
+          <tr>
+            <th>FINAL YEAR<b>REALITY</b></th>
+            <td>There were simply too many tips. And only one place to put them.</td>
+          </tr>
+          <tr class="tipping">
+            <th>SEPT. 15, 2008<b>THE TIPPING POINT</b></th>
+            <td>MeatTip.com closes its doors.</td>
+          </tr>
+        </table>
+      </section>
+
+      <hr class="rule">
+
+      <section>
+        <h2>Frequently Asked Questions</h2>
+        <dl class="faq">
+          <dt>Why not simply publish more than one tip on MeatTip.com?</dt>
+          <dd><p>Because words mean things.</p></dd>
+
+          <dt>Could you have published two tips and still called the site MeatTip?</dt>
+          <dd><p>Technically, no. Because it violated everything we stood for technologically.</p></dd>
+
+          <dt>Did anyone actually prevent you from publishing more tips?</dt>
+          <dd><p>That is not the point.</p></dd>
+
+          <dt>Could you have chosen another name?</dt>
+          <dd><p>Other domains reached around to us. None felt like the right fit.</p></dd>
+
+          <dt>Will the tips remain available?</dt>
+          <dd><p>Maybe just one. But we do not know how long we can maintain it.</p></dd>
+
+          <dt>What happens to MeatTip.com now?</dt>
+          <dd>
+            <p>After years spent bringing people together around the tip, we have decided to move in a different direction. A more solitary direction.</p>
+            <p>In the coming months, MeatTip.com will begin its transition into a resource for people who enjoy the solitude of adventuring to the top of icebergs alone.</p>
+          </dd>
+        </dl>
+      </section>
+
+      <hr class="rule">
+
+      <section>
+        <div class="ice-stack">
+          <p>One person.</p>
+          <p>One iceberg.</p>
+          <p class="pull">One tip.</p>
+        </div>
+
+        <svg class="iceberg" viewBox="0 0 180 110" aria-hidden="true">
+          <line x1="0" y1="60" x2="180" y2="60" stroke="#1d7f8c" stroke-width="1"/>
+          <path d="M52 60 L74 30 L84 37 L92 14 L108 40 L117 35 L134 60 Z" fill="#e6fbf8" stroke="#1d7f8c" stroke-width="1.4" stroke-linejoin="round"/>
+          <path d="M52 60 L40 78 L56 100 L98 107 L132 95 L146 74 L134 60" fill="none" stroke="#1d7f8c" stroke-width="1" stroke-dasharray="3 3" stroke-linejoin="round" opacity=".7"/>
+          <circle cx="92" cy="9.5" r="2" fill="#c00000"/>
+          <line x1="92" y1="11.5" x2="92" y2="16" stroke="#c00000" stroke-width="1.5"/>
+        </svg>
+
+        <p class="me-at-tip">ME AT TIP DOT COM</p>
+        <p class="alone">For those who prefer to reach the tip alone.</p>
+
+        <p class="signature">MEATTIP.COM</p>
+      </section>
+
+    </div>
+
+    <footer class="foot">
+      <p>You are visitor number <span class="counter">000001</span></p>
+      <p>
+        <span class="badge">Best viewed in Internet Explorer 6</span>
+        <span class="badge">800 &times; 600</span>
+        <span class="badge">Last updated 09/12/2008</span>
+      </p>
+      <p>&copy; 2008 MeatTip.com. All Rights Reserved.</p>
+    </footer>
+
+  </article>
+</div>
+
+<script>
+/*
+  The splash wall of meat.
+  Top of the page: stock photography (Unsplash, free license).
+  The further down you scroll, the more the budget runs out and the
+  tiles become AI-generated. Drop your AI meat images into /images as
+  ai-1.jpg, ai-2.jpg ... (as many as listed in AI_COUNT). Until a file
+  exists, that tile falls back to a stock photo made progressively
+  more uncanny with filters.
+*/
+(function () {
+  var STOCK_IDS = [
+    "photo-1607623814075-e51df1bdc82f", "photo-1690983323238-0b91789e1b5a",
+    "photo-1690983325551-b922137727be", "photo-1690983330536-3b0089d07cf9",
+    "photo-1613454320437-0c228c8b1723", "photo-1690983321750-ad6f6d59a84b",
+    "photo-1588347818036-558601350947", "photo-1602470520998-f4a52199a3d6",
+    "photo-1690983323540-d6e889c4b107", "photo-1632154023554-c2975e9be348",
+    "photo-1604503468506-a8da13d82791", "photo-1603048297172-c92544798d5a",
+    "photo-1606677661991-446cea8ee182", "photo-1690983322025-aab4f95a0269",
+    "photo-1722928566022-8a6f179eab9e", "photo-1600180786608-28d06391d25c",
+    "photo-1666013942642-b7b54ecafd7d", "photo-1602470521006-59ab77068b0d",
+    "photo-1690983329845-638ec321647d", "photo-1602470521006-aaea8b2fcc36"
+  ];
+  var AI_COUNT = 12;
+
+  var splash = document.getElementById("splash");
+  var stage = splash.parentNode;
+  var lastKey = "";
+
+  function stockUrl(i) {
+    return "https://images.unsplash.com/" + STOCK_IDS[i % STOCK_IDS.length] +
+      "?w=340&h=340&fit=crop&auto=format&q=60";
+  }
+
+  // small seeded random so the wall looks the same on every visit
+  function seeded(seed) {
+    return function () { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };
+  }
+
+  // what a stock photo looks like when the budget is gone
+  function uncanny(img, k, rand) {
+    if (k <= 0) return;
+    var hue = (rand() - 0.5) * 140 * k;
+    img.style.filter =
+      "saturate(" + (1 + k * 2.4).toFixed(2) + ") " +
+      "contrast(" + (1 + k * 0.5).toFixed(2) + ") " +
+      "hue-rotate(" + hue.toFixed(0) + "deg) " +
+      "blur(" + (k * 0.7).toFixed(2) + "px)";
+    var flip = rand() < k * 0.5 ? -1 : 1;
+    img.style.transform =
+      "scale(" + (flip * (1 + k * 0.35)).toFixed(2) + "," + (1 + k * 0.2).toFixed(2) + ") " +
+      "skew(" + ((rand() - 0.5) * 18 * k).toFixed(1) + "deg, " + ((rand() - 0.5) * 10 * k).toFixed(1) + "deg)";
+    if (k > 0.75) img.style.borderRadius = (rand() * 40 * k).toFixed(0) + "%";
+  }
+
+  function build() {
+    var tile = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--tile")) || 170;
+    var cols = Math.max(3, Math.ceil(stage.clientWidth / tile));
+    var rows = Math.ceil(stage.scrollHeight / (tile + 3)) + 1;
+    var key = cols + "x" + rows;
+    if (key === lastKey) return;
+    lastKey = key;
+
+    splash.style.gridTemplateColumns = "repeat(" + cols + ", 1fr)";
+    var rand = seeded(2008);
+    var frag = document.createDocumentFragment();
+
+    for (var y = 0; y < rows; y++) {
+      var depth = rows > 1 ? y / (rows - 1) : 0;                 // 0 at top, 1 at bottom
+      var broke = Math.min(1, Math.max(0, (depth - 0.18) / 0.7)); // how far the money has run out
+      for (var x = 0; x < cols; x++) {
+        var cell = document.createElement("div");
+        cell.className = "t";
+        var img = document.createElement("img");
+        img.alt = "";
+        img.loading = "lazy";
+        img.decoding = "async";
+        var stock = stockUrl(Math.floor(rand() * STOCK_IDS.length));
+
+        if (rand() < broke * broke * 0.85 + broke * 0.15) {
+          var k = Math.min(1, broke * (0.6 + rand() * 0.6));
+          img.src = "images/ai-" + (1 + Math.floor(rand() * AI_COUNT)) + ".jpg";
+          img.onerror = (function (im, s, kk, r) {
+            return function () { im.onerror = null; im.src = s; uncanny(im, kk, r); };
+          })(img, stock, k, seeded(Math.floor(rand() * 1e9) + 1));
+        } else {
+          img.src = stock;
+        }
+        cell.appendChild(img);
+        frag.appendChild(cell);
+      }
+    }
+    splash.innerHTML = "";
+    splash.appendChild(frag);
+  }
+
+  var t;
+  function soon() { clearTimeout(t); t = setTimeout(build, 120); }
+  build();
+  window.addEventListener("resize", soon);
+  window.addEventListener("load", soon);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(soon);
+})();
+</script>
+
+</body>
+</html>
